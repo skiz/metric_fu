@@ -1,6 +1,9 @@
 require 'rake'
 require 'yaml'
 require 'active_support'
+require 'active_support/core_ext/object'
+require 'active_support/json'
+
 # Load a few things to make our lives easier elsewhere.
 module MetricFu
   LIB_ROOT = File.dirname(__FILE__)

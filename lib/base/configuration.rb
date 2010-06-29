@@ -5,10 +5,14 @@ module MetricFu
   # These are metrics which have been developed for the system.  Of
   # course, in order to use these metrics, their respective gems must
   # be installed on the system.
-  AVAILABLE_METRICS = [:churn, :flog, :flay, :reek, 
-                       :roodi, :saikuro, :rcov]
 
-  AVAILABLE_GRAPHS = [:flog, :flay, :reek, :roodi, :rcov, :rails_best_practices]
+  # :flog disabled due to circular include reference
+  # :churn disabled due to error: undefined method `[]' for false:FalseClass
+  # :saikruo disabled due to error: no such file to load -- rdoc/usage \  
+  AVAILABLE_METRICS = [:rcov, :flay, :reek, :roodi, :rails_best_practices]
+
+  AVAILABLE_GRAPHS = [:rcov, :flay, :reek, :roodi, :rails_best_practices]
+
   AVAILABLE_GRAPH_ENGINES = [:gchart, :bluff]
 
   # The @@configuration class variable holds a global type configuration
@@ -129,8 +133,8 @@ module MetricFu
       @rcov     = { :environment => 'test',
                     :test_files => ['test/**/*_test.rb', 
                                     'spec/**/*_spec.rb'],
-                    :rcov_opts => ["--sort coverage", 
-                                   "--no-html", 
+                    :rcov_opts => ["--sort coverage",
+                                   "--no-html",
                                    "--text-coverage",
                                    "--no-color",
                                    "--profile",

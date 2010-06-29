@@ -3,6 +3,7 @@ require 'rubygems'
 require 'rake'
 require 'rake/rdoctask'
 require 'rspec/core/rake_task'
+require 'active_support/core_ext/object'
 require 'lib/metric_fu'
  
 desc "Run all specs in spec directory"
