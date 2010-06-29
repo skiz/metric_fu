@@ -1,11 +1,11 @@
 require 'rake'
 require 'yaml'
-require 'activesupport'
+require 'active_support'
 # Load a few things to make our lives easier elsewhere.
 module MetricFu
   LIB_ROOT = File.dirname(__FILE__)
 end
-base_dir = File.join(MetricFu::LIB_ROOT, 'base')
+base_dir         = File.join(MetricFu::LIB_ROOT, 'base')
 generator_dir    = File.join(MetricFu::LIB_ROOT, 'generators')
 template_dir     = File.join(MetricFu::LIB_ROOT, 'templates')
 graph_dir        = File.join(MetricFu::LIB_ROOT, 'graphs')

@@ -1,5 +1,7 @@
 require 'rubygems'
-require 'spec/autorun'
+require 'active_support/core_ext/object'
+require 'active_support/json'
+require 'rspec/autorun'
 require 'date'
 require 'construct'
 
