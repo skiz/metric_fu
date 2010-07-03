@@ -6,10 +6,9 @@ module MetricFu
   # course, in order to use these metrics, their respective gems must
   # be installed on the system.
 
-  # :flog disabled due to circular include reference
   # :churn disabled due to error: undefined method `[]' for false:FalseClass
   # :saikruo disabled due to error: no such file to load -- rdoc/usage \  
-  AVAILABLE_METRICS = [:rcov, :flay, :reek, :roodi, :rails_best_practices]
+  AVAILABLE_METRICS = [:flog, :rcov, :flay, :reek, :roodi, :rails_best_practices]
 
   AVAILABLE_GRAPHS = [:rcov, :flay, :reek, :roodi, :rails_best_practices]
 
